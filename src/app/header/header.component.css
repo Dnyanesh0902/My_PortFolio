@@ -1,0 +1,9 @@
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-toggler {
+        border-color: #fff; /* Change the color of the toggle button */
+    }
+}
