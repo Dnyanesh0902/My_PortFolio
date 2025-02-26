@@ -1,65 +1,58 @@
 <div class="container mt-2 pt-2 text-white">
-    <h1 class="fw-bold text-center text-decoration-underline mb-4">Contact Me</h1>
-  
-    <div class="row">
-      <div class="col-md-6 p-3">
-        <form action="your-backend-endpoint" method="POST">
-          <div class="mb-3">
-            <label for="name" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-          </div>
-          
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-          
-          <div class="mb-3">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" class="form-control" id="subject" name="subject" required>
-          </div>
-          
-          <div class="mb-3">
-            <label for="message" class="form-label">Your Message</label>
-            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn btn-warning btn-lg">Send Message</button>
-        </form>
-      </div>
-  
-      <div class="col-md-6 text-center  pt-2">
-        <h3 class="text-warning mb-3">Follow Me</h3>
-        <div class="d-flex justify-content-center">
-          <a href="https://www.linkedin.com/in/dnyaneshwar-kokate-04a12b258/" target="_blank" class="mx-3">
-            <i class="fab fa-linkedin fa-3x text-white"></i>
-          </a>
-          <a href="https://github.com/Dnyanesh0902" target="_blank" class="mx-3">
-            <i class="fab fa-github fa-3x text-white"></i>
-          </a>
-          <a href="https://x.com/Dnyanesh_K_009" target="_blank" class="mx-3">
-            <i class="fab fa-twitter fa-3x text-white"></i>
-          </a>
-          <a href="https://www.instagram.com/dnyanesh_kokate_009/?hl=en" target="_blank" class="mx-3">
-            <i class="fab fa-instagram fa-3x text-white"></i>
-          </a>
+  <h1 class="fw-bold text-center text-decoration-underline mb-4">Contact Me</h1>
+  <div class="row">
+    <div class="col-md-6 p-3">
+      <form (ngSubmit)="sendMessage()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" required>
         </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject" [(ngModel)]="subject" name="subject" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Message</label>
+          <textarea class="form-control" id="message" [(ngModel)]="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg w-100">Send Message</button>
+      </form>
+    </div>
+
+    <div class="col-md-6 text-center  pt-2">
+      <h3 class="text-warning mb-3 text-decoration-underline">Follow Me</h3>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/dnyaneshwar-kokate-04a12b258/" target="_blank" class="mx-3">
+          <i class="fab fa-linkedin fa-3x text-white"></i>
+        </a>
+        <a href="https://github.com/Dnyanesh0902" target="_blank" class="mx-3">
+          <i class="fab fa-github fa-3x text-white"></i>
+        </a>
+        <a href="https://x.com/Dnyanesh_K_009" target="_blank" class="mx-3">
+          <i class="fab fa-twitter fa-3x text-white"></i>
+        </a>
+        <a href="https://www.instagram.com/dnyanesh_kokate_009/?hl=en" target="_blank" class="mx-3">
+          <i class="fab fa-instagram fa-3x text-white"></i>
+        </a>
       </div>
     </div>
   </div>
-  
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  
-  <style>
+</div>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<style>
     
-    .d-flex a i {
-      color: white; 
-      transition: color 0.3s ease;
-    }
-  
-    .d-flex a i:hover {
-      color: #ffcc00; 
-    }
-  </style>
-  
+  .d-flex a i {
+    color: white; 
+    transition: color 0.3s ease;
+  }
+
+  .d-flex a i:hover {
+    color: #ffcc00; 
+  }
+</style>

@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  closeNavbar() {
+    const navbar = document.getElementById('navbarNav');
+    if (navbar) {
+      navbar.classList.remove('show'); 
+    }
+  }
 }
